@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<scene>
+	<lights>
+		<light type="POINT" posX="0" posY="0" posZ="0" />
+	</lights>
+
+	<group>
+		<!--Espaço-->
+    		<group>
+        		<scale X="7" Y="7" Z="7" />
+        		<models>
+            			<model file="Modelos\Modelos_3D\boxInversa.3d" texture="Modelos\Modelos_3D\Sky.jpg" emiR="0.5" emiG="0.5" emiB="0.5" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1"/>
+        		</models>
+    		</group>
+
+		<!--SOL-->
+    		<group>
+        		<scale X="8" Y="8" Z="8" />
+        		<rotate time="100" axisY="1" />
+			<models>
+            			<model file="Modelos\Modelos_3D\esfera.3d" emiR="1" emiG="1" emiB="1" texture="Modelos\Modelos_3D\2k_sun.jpg" code="1" nome="Sol"/>
+        		</models>
+    		</group>
+		
+		<!--COMETA-->
+		<group>
+			<translate time="5">
+				<point X="97.955549577" Z="15.529142706" />
+				<point X="82.426406871" Z="42.426406871" />
+				<point X="55.529142706" Z="57.955549577" />
+				<point X="30.529142706" Z="57.955549577" />
+				<point X="-2.426406871" Z="42.426406871" />
+				<point X="-17.955549577" Z="15.529142706" />
+				<point X="-17.955549577" Z="-15.529142706" />
+				<point X="-2.426406871" Z="-42.426406871" />
+				<point X="30.529142706" Z="-57.955549577" />
+				<point X="55.529142706" Z="-57.955549577" />
+				<point X="82.426406871" Z="-42.426406871" />
+				<point X="97.955549577" Z="-15.529142706" />
+			</translate>
+			<models>
+				<model file="Modelos\Modelos_3D\teapot.3d" texture="Modelos\Modelos_3D\rochas.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1" />
+			</models>
+		</group>
+
+		<!--Mercurio-->
+    		<group>
+				<translate time="439.845">
+					<point X="43.466662183" Z="11.64685703" />
+					<point X="31.819805153" Z="31.819805153" />
+					<point X="11.64685703" Z="43.466662183" />
+					<point X="-11.64685703" Z="43.466662183" />
+					<point X="-31.819805153" Z="31.819805153" />
+					<point X="-43.466662183" Z="11.64685703" />
+					<point X="-43.466662183" Z="-11.64685703" />
+					<point X="-31.819805153" Z="-31.819805153" />
+					<point X="-11.64685703" Z="-43.466662183" />
+					<point X="11.64685703" Z="-43.466662183" />
+					<point X="31.819805153" Z="-31.819805153" />
+					<point X="43.466662183" Z="-11.64685703" />
+				</translate>
+				<rotate time="290" axisX="0" axisY="1" axisZ="0"/>
+				<scale X="0.3" Y="0.3" Z="0.3" />
+ 
+        		<models>
+        			<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\mercurymap.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1" code="3" nome="Mercurio"/>
+    			</models>
+
+    		</group>
+   
+		<!--Venus-->
+    		<group>
+				<translate time="1120">
+					<point X="53.125920446" Z="14.235047481" />
+					<point X="38.890872965" Z="38.890872965" />
+					<point X="14.235047481" Z="53.125920446" />
+					<point X="-14.235047481" Z="53.125920446" />
+					<point X="-38.890872965" Z="38.890872965" />
+					<point X="-53.125920446" Z="14.235047481" />
+					<point X="-53.125920446" Z="-14.235047481" />
+					<point X="-38.890872965" Z="-38.890872965" />
+					<point X="-14.235047481" Z="-53.125920446" />
+					<point X="14.235047481" Z="-53.125920446" />
+					<point X="38.890872965" Z="-38.890872965" />
+					<point X="53.125920446" Z="-14.235047481" />
+				</translate>
+				<rotate time="1215" axisX="0" axisY="1" axisZ="0"/>
+				<scale X="0.3" Y="0.3" Z="0.3" />
+         
+        		<models>
+        			<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\2k_venus_surface.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1" code="4" nome="Venus"/>
+        		</models>
+    		</group>
+    
+		<!--Terra-->
+    		<group>
+				<translate time="1825">
+					<point X="57.955549577" Z="15.529142706" />
+					<point X="42.426406871" Z="42.426406871" />
+					<point X="15.529142706" Z="57.955549577" />
+					<point X="-15.529142706" Z="57.955549577" />
+					<point X="-42.426406871" Z="42.426406871" />
+					<point X="-57.955549577" Z="15.529142706" />
+					<point X="-57.955549577" Z="-15.529142706" />
+					<point X="-42.426406871" Z="-42.426406871" />
+					<point X="-15.529142706" Z="-57.955549577" />
+					<point X="15.529142706" Z="-57.955549577" />
+					<point X="42.426406871" Z="-42.426406871" />
+					<point X="57.955549577" Z="-15.529142706" />
+				</translate>
+				<rotate time="5" axisX="0" axisY="1" axisZ="0"/>
+				<scale X="0.4" Y="0.4" Z="0.4" />
+        
+        		<models>
+        			<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\earthmap1k.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1" code="5" nome="Terra"/>
+        		</models>
+
+			<!--Lua-->
+        		<group>
+        			<rotate angle="6.68" axisX="0" axisY="0" axisZ="1" />
+					<translate time="1825">
+						<point X="9.6592582629" Z="2.588190451" />
+						<point X="7.0710678119" Z="7.0710678119" />
+						<point X="2.588190451" Z="9.6592582629" />
+						<point X="-2.588190451" Z="9.6592582629" />
+						<point X="-7.0710678119" Z="7.0710678119" />
+						<point X="-9.6592582629" Z="2.588190451" />
+						<point X="-9.6592582629" Z="-2.588190451" />
+						<point X="-7.0710678119" Z="-7.0710678119" />
+						<point X="-2.588190451" Z="-9.6592582629" />
+						<point X="2.588190451" Z="-9.6592582629" />
+						<point X="7.0710678119" Z="-7.0710678119" />
+						<point X="9.6592582629" Z="-2.588190451" />
+					</translate>
+					<rotate time="5" axisX="0" axisY="1" axisZ="0"/>
+	          		<scale X="0.37" Y="0.37" Z="0.37" />            
+		
+				<models>               
+			        	<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\moonmap1k.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1" code="6" nome="Lua"/>
+        			</models>
+        		</group>
+    		</group>
+
+		<!--Marte-->
+    		<group>
+				<translate time="3435">
+					<point X="67.61480784" Z="18.117333157" />
+					<point X="49.497474683" Z="49.497474683" />
+					<point X="18.117333157" Z="67.61480784" />
+					<point X="-18.117333157" Z="67.61480784" />
+					<point X="-49.497474683" Z="49.497474683" />
+					<point X="-67.61480784" Z="18.117333157" />
+					<point X="-67.61480784" Z="-18.117333157" />
+					<point X="-49.497474683" Z="-49.497474683" />
+					<point X="-18.117333157" Z="-67.61480784" />
+					<point X="18.117333157" Z="-67.61480784" />
+					<point X="49.497474683" Z="-49.497474683" />
+					<point X="67.61480784" Z="-18.117333157" />
+				</translate>
+				<rotate time="5" axisX="0" axisY="1" axisZ="0"/>
+				<scale X="0.073" Y="0.073" Z="0.073" />
+       
+			<models>
+        			<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\mars_1k_color.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1" code="7" nome="Marte"/>
+        		</models>
+			<!--Fobos-->
+        		<group>
+        			<rotate angle="15" axisX="0" axisY="0" axisZ="1" />
+					<translate time="2.5" >
+						<point X="4.8296291314" Z="1.2940952255" />
+						<point X="3.5355339059" Z="3.5355339059" />
+						<point X="1.2940952255" Z="4.8296291314" />
+						<point X="-1.2940952255" Z="4.8296291314" />
+						<point X="-3.5355339059" Z="3.5355339059" />
+						<point X="-4.8296291314" Z="1.2940952255" />
+						<point X="-4.8296291314" Z="-1.2940952255" />
+						<point X="-3.5355339059" Z="-3.5355339059" />
+						<point X="-1.2940952255" Z="-4.8296291314" />
+						<point X="1.2940952255" Z="-4.8296291314" />
+						<point X="3.5355339059" Z="-3.5355339059" />
+						<point X="4.8296291314" Z="-1.2940952255" />
+					</translate>
+					<rotate time="1.7" axisX="0" axisY="1" axisZ="0"/>
+					<scale X="0.2" Y="0.2" Z="0.2" />            
+		
+				<models>               
+					<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\2k_haumea_fictional.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1" code="8" nome="Fobos"/>
+        			</models>
+        		</group>
+			<!--Demios-->
+        		<group>
+        			<rotate angle="25" axisX="0" axisY="0" axisZ="1" />
+					<translate time="6.25" >
+						<point X="9.6592582629" Z="2.588190451" />
+						<point X="7.0710678119" Z="7.0710678119" />
+						<point X="2.588190451" Z="9.6592582629" />
+						<point X="-2.588190451" Z="9.6592582629" />
+						<point X="-7.0710678119" Z="7.0710678119" />
+						<point X="-9.6592582629" Z="2.588190451" />
+						<point X="-9.6592582629" Z="-2.588190451" />
+						<point X="-7.0710678119" Z="-7.0710678119" />
+						<point X="-2.588190451" Z="-9.6592582629" />
+						<point X="2.588190451" Z="-9.6592582629" />
+						<point X="7.0710678119" Z="-7.0710678119" />
+						<point X="9.6592582629" Z="-2.588190451" />
+					</translate>
+					<scale X="0.1" Y="0.1" Z="0.1" />            
+		
+				<models>                
+					<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\2k_ceres_fictional.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1" code="9" nome="Demios"/>
+        			</models>
+        		</group>
+    		</group>
+
+		<!--Jupiter-->
+    		<group>
+				<translate time="21715">
+					<point X="106.25184089" Z="28.470094961" />
+					<point X="77.781745931" Z="77.781745931" />
+					<point X="28.470094961" Z="106.25184089" />
+					<point X="-28.470094961" Z="106.25184089" />
+					<point X="-77.781745931" Z="77.781745931" />
+					<point X="-106.25184089" Z="28.470094961" />
+					<point X="-106.25184089" Z="-28.470094961" />
+					<point X="-77.781745931" Z="-77.781745931" />
+					<point X="-28.470094961" Z="-106.25184089" />
+					<point X="28.470094961" Z="-106.25184089" />
+					<point X="77.781745931" Z="-77.781745931" />
+					<point X="106.25184089" Z="-28.470094961" />
+				</translate>
+				<rotate time="2.083" axisX="0" axisY="1" axisZ="0"/>
+				<scale X="1.54" Y="1.54" Z="1.54" />
+        
+        		<models>
+        			<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\jupitermap.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1" code="10" nome="Jupiter"/>
+    			</models>
+			<!--Luas de Júpiter-->
+        		<group>
+					<rotate angle="6.68" axisX="0" axisY="0" axisZ="1" />
+					<translate time="20">
+						<point X="8.6933324366" Z="2.3293714059" />
+						<point X="6.3639610307" Z="6.3639610307" />
+						<point X="2.3293714059" Z="8.6933324366" />
+						<point X="-2.3293714059" Z="8.6933324366" />
+						<point X="-6.3639610307" Z="6.3639610307" />
+						<point X="-8.6933324366" Z="2.3293714059" />
+						<point X="-8.6933324366" Z="-2.3293714059" />
+						<point X="-6.3639610307" Z="-6.3639610307" />
+						<point X="-2.3293714059" Z="-8.6933324366" />
+						<point X="2.3293714059" Z="-8.6933324366" />
+						<point X="6.3639610307" Z="-6.3639610307"/>
+						<point X="8.6933324366" Z="-2.3293714059" />
+					</translate>
+					<rotate time="2" axisX="0" axisY="0" axisZ="1"/>
+					<scale X="0.04" Y="0.04" Z="0.04" />           
+        	
+				<models>
+                			<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\2k_ceres_fictional.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1"/>
+        			</models>
+        		</group>
+                    
+       			<group>
+        			<rotate angle="7" axisX="0" axisY="0" axisZ="1" />
+					<translate time="30" >
+						<point X="4.8296291314" Z="1.2940952255" />
+						<point X="3.5355339059" Z="3.5355339059" />
+						<point X="1.2940952255" Z="4.8296291314" />
+						<point X="-1.2940952255" Z="4.8296291314" />
+						<point X="-3.5355339059" Z="3.5355339059" />
+						<point X="-4.8296291314" Z="1.2940952255" />
+						<point X="-4.8296291314" Z="-1.2940952255" />
+						<point X="-3.5355339059" Z="-3.5355339059" />
+						<point X="-1.2940952255" Z="-4.8296291314" />
+						<point X="1.2940952255" Z="-4.8296291314" />
+						<point X="3.5355339059" Z="-3.5355339059" />
+						<point X="4.8296291314" Z="-1.2940952255" />
+					</translate>
+					<scale X="0.03" Y="0.03" Z="0.03" /> 
+          
+       				<models>
+                			<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\2k_eris_fictional.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1"/>
+        			</models>
+        		</group>
+                   
+        		<group>
+        			<rotate angle="35" axisX="0" axisY="0" axisZ="1" />
+					<translate time="30" >
+						<point X="6.761480784" Z="1.8117333157" />
+						<point X="4.9497474683" Z="4.9497474683" />
+						<point X="1.8117333157" Z="6.761480784" />
+						<point X="-1.8117333157" Z="6.761480784" />
+						<point X="-4.9497474683" Z="4.9497474683" />
+						<point X="-6.761480784" Z="1.8117333157" />
+						<point X="-6.761480784" Z="-1.8117333157" />
+						<point X="-4.9497474683" Z="-4.9497474683" />
+						<point X="-1.8117333157" Z="-6.761480784" />
+						<point X="1.8117333157" Z="-6.761480784" />
+						<point X="4.9497474683" Z="-4.9497474683" />
+						<point X="6.761480784" Z="-1.8117333157" />
+					</translate>
+					<scale X="0.06" Y="0.06" Z="0.06" /> 
+          
+        			<models>
+                			<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\2k_haumea_fictional.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1"/>
+        			</models>
+        		</group>
+                 
+        		<group>
+        			<rotate angle="30" axisX="0" axisY="0" axisZ="1" />
+					<translate time="20">
+						<point X="8.6933324366" Z="2.3293714059" />
+						<point X="6.3639610307" Z="6.3639610307" />
+						<point X="2.3293714059" Z="8.6933324366" />
+						<point X="-2.3293714059" Z="8.6933324366" />
+						<point X="-6.3639610307" Z="6.3639610307" />
+						<point X="-8.6933324366" Z="2.3293714059" />
+						<point X="-8.6933324366" Z="-2.3293714059" />
+						<point X="-6.3639610307" Z="-6.3639610307" />
+						<point X="-2.3293714059" Z="-8.6933324366" />
+						<point X="2.3293714059" Z="-8.6933324366" />
+						<point X="6.3639610307" Z="-6.3639610307"/>
+						<point X="8.6933324366" Z="-2.3293714059" />
+					</translate>
+					<scale X="0.04" Y="0.04" Z="0.04" />
+           
+  				<models>
+                			<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\2k_makemake_fictional.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1"/>
+        			</models>
+        		</group>
+    		</group>
+		
+		<!--Saturno-->
+    		<group>
+				<translate time="145">
+					<point X="144.88887394" Z="38.822856765" />
+					<point X="106.06601718" Z="106.06601718" />
+					<point X="38.822856765" Z="144.88887394" />
+					<point X="-38.822856765" Z="144.88887394"/>
+					<point X="-106.06601718" Z="106.06601718" />
+					<point X="-144.88887394" Z="38.822856765" />
+					<point X="-144.88887394" Z="-38.822856765" />
+					<point X="-106.06601718" Z="-106.06601718" />
+					<point X="-38.822856765" Z="-144.88887394" />
+					<point X="38.822856765" Z="-144.88887394" />
+					<point X="106.06601718" Z="-106.06601718"/>
+					<point X="144.88887394" Z="-38.822856765" />
+				</translate>
+				<rotate time="2.292" axisX="0" axisY="1" axisZ="0"/>
+				<scale X="1.29" Y="1.29" Z="1.29" />
+        
+    			<models>
+        			<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\saturnmap.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1" code="12" nome="Saturno"/>
+        		</models>
+			<!--Anel Saturno-->
+			<group>
+		        	<rotate angle="45" axisX="0" axisY="0" axisZ="1" />
+				<models>
+        				<model file="Modelos\Modelos_3D\arco.3d" texture="Modelos\Modelos_3D\saturnringcolor.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1"/>
+        			</models>
+			</group>
+			<!--Luas Saturno-->
+        		<group>
+        			<rotate angle="6" axisX="0" axisY="0" axisZ="1" />
+					<translate time="30">
+						<point X="5.7955549577" Z="1.5529142706" />
+						<point X="4.2426406871" Z="4.2426406871" />
+						<point X="1.5529142706" Z="5.7955549577" />
+						<point X="-1.5529142706" Z="5.7955549577"/>
+						<point X="-4.2426406871" Z="4.2426406871" />
+						<point X="-5.7955549577" Z="1.5529142706" />
+						<point X="-5.7955549577" Z="-1.5529142706" />
+						<point X="-4.2426406871" Z="-4.2426406871" />
+						<point X="-1.5529142706" Z="-5.7955549577" />
+						<point X="1.5529142706" Z="-5.7955549577" />
+						<point X="4.2426406871" Z="-4.2426406871"/>
+						<point X="5.7955549577" Z="-1.5529142706" />
+					</translate>
+			        <scale X="0.037" Y="0.037" Z="0.037" />            
+		
+				<models>               
+					<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\2k_ceres_fictional.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1"/>
+        			</models>
+        		</group>
+
+        		<group>
+        			<rotate angle="8" axisX="0" axisY="0" axisZ="1" />
+					<translate time="20">
+						<point X="2.8977774789" Z="0.77645713531" />
+						<point X="2.1213203436" Z="2.1213203436" />
+						<point X="0.77645713531" Z="2.8977774789" />
+						<point X="-0.77645713531" Z="2.8977774789" />
+						<point X="-2.1213203436" Z="2.1213203436" />
+						<point X="-2.8977774789" Z="0.77645713531" />
+						<point X="-2.8977774789" Z="-0.77645713531" />
+						<point X="-2.1213203436" Z="-2.1213203436" />
+						<point X="-0.77645713531" Z="-2.8977774789" />
+						<point X="0.77645713531" Z="-2.8977774789" />
+						<point X="2.1213203436" Z="-2.1213203436" />
+						<point X="2.8977774789" Z="-0.77645713531" />
+					</translate>
+					<scale X="0.029" Y="0.029" Z="0.029" />            
+		
+				<models>               
+					<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\2k_eris_fictional.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1"/>
+        			</models>
+        		</group>
+
+        		<group>
+        			<rotate angle="10" axisX="0" axisY="0" axisZ="1" />
+					<translate time="30">
+						<point X="13.039998655" Z="3.4940571089" />
+						<point X="9.545941546" Z="9.545941546" />
+						<point X="3.4940571089" Z="13.039998655" />
+						<point X="-3.4940571089" Z="13.039998655"/>
+						<point X="-9.545941546" Z="9.545941546" />
+						<point X="-13.039998655" Z="3.4940571089" />
+						<point X="-13.039998655" Z="-3.4940571089" />
+						<point X="-9.545941546" Z="-9.545941546" />
+						<point X="-3.4940571089" Z="-13.039998655" />
+						<point X="3.4940571089" Z="-13.039998655" />
+						<point X="9.545941546" Z="-9.545941546"/>
+						<point X="13.039998655" Z="-3.4940571089" />
+					</translate>
+					<scale X="0.07" Y="0.07" Z="0.07" />            
+		
+				<models>               
+					<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\2k_haumea_fictional.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1"/>
+        			</models>
+        		</group>
+
+        		<group>
+        			<rotate angle="12" axisX="0" axisY="0" axisZ="1" />
+					<translate time="30">
+						<point X="4.3466662183" Z="1.164685703" />
+						<point X="3.1819805153" Z="3.1819805153" />
+						<point X="1.164685703" Z="4.3466662183" />
+						<point X="-1.164685703" Z="4.3466662183" />
+						<point X="-3.1819805153" Z="3.1819805153" />
+						<point X="-4.3466662183" Z="1.164685703" />
+						<point X="-4.3466662183" Z="-1.164685703" />
+						<point X="-3.1819805153" Z="-3.1819805153" />
+						<point X="-1.164685703" Z="-4.3466662183" />
+						<point X="1.164685703" Z="-4.3466662183" />
+						<point X="3.1819805153" Z="-3.1819805153" />
+						<point X="4.3466662183" Z="-1.164685703" />
+					</translate>
+					<scale X="0.03" Y="0.03" Z="0.03" />            
+		
+				<models>               
+					<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\2k_makemake_fictional.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1"/>
+        			</models>
+        		</group>
+
+        		<group>
+        			<rotate angle="14" axisX="0" axisY="0" axisZ="1" />
+        			<translate X="7.5" Y="0" Z="0" />
+				<scale X="0.04" Y="0.04" Z="0.04" />            
+		
+				<models>               
+					<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\2k_makemake_fictional.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1"/>
+        			</models>
+        		</group>
+
+        		<group>
+        			<rotate angle="16" axisX="0" axisY="0" axisZ="1" />
+        			<translate X="10.5" Y="0" Z="0" />
+				<scale X="0.05" Y="0.05" Z="0.05" />            
+		
+				<models>               
+					<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\sunmap.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1"/>
+        			</models>
+        		</group>
+
+        		<group>
+        			<rotate angle="18" axisX="0" axisY="0" axisZ="1" />
+        			<translate X="15" Y="0" Z="0" />
+				<scale X="0.1" Y="0.1" Z="0.1" />            
+		
+				<models>               
+					<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\uranusmap.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1"/>
+        			</models>
+        		</group>
+
+        		<group>
+        			<rotate angle="20" axisX="0" axisY="0" axisZ="1" />
+        			<translate X="12" Y="0" Z="0" />
+				<scale X="0.06" Y="0.06" Z="0.06" />            
+		
+				<models>               
+					<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\neptunemap.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1"/>
+        			</models>
+        		</group>
+
+        		<group>
+        			<rotate angle="22" axisX="0" axisY="0" axisZ="1" />
+        			<translate X="9" Y="0" Z="0" />
+				<scale X="0.045" Y="0.045" Z="0.045" />            
+		
+				<models>               
+					<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\2k_ceres_fictional.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1"/>
+        			</models>
+        		</group>
+    		</group>
+		
+		<!--Urano-->
+    		<group>
+			<translate time="153300">
+				<point X="173.86664873" Z="46.587428118" />
+				<point X="127.27922061" Z="127.27922061" />
+				<point X="46.587428118" Z="173.86664873" />
+				<point X="-46.587428118" Z="173.86664873" />
+				<point X="-127.27922061" Z="127.27922061" />
+				<point X="-173.86664873" Z="46.587428118" />
+				<point X="-173.86664873" Z="-46.587428118" />
+				<point X="-127.27922061" Z="-127.27922061" />
+				<point X="-46.587428118" Z="-173.86664873" />
+				<point X="46.587428118" Z="-173.86664873" />
+				<point X="127.27922061" Z="-127.27922061" />
+				<point X="173.86664873" Z="-46.587428118" />
+			</translate>
+			<rotate time="3.54" axisX="0" axisY="-1" axisZ="0"/>
+			<scale X="0.56" Y="0.56" Z="0.56" />
+        
+        		<models>
+        			<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\uranusmap.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1" code="13" nome="Uranos"/>
+        		</models>
+			<!--Luas Urano-->
+        		<group>
+        			<rotate angle="8" axisX="0" axisY="0" axisZ="1" />
+					<translate time="30">
+						<point X="5.7955549577" Z="1.5529142706" />
+						<point X="4.2426406871" Z="4.2426406871" />
+						<point X="1.5529142706" Z="5.7955549577" />
+						<point X="-1.5529142706" Z="5.7955549577"/>
+						<point X="-4.2426406871" Z="4.2426406871" />
+						<point X="-5.7955549577" Z="1.5529142706" />
+						<point X="-5.7955549577" Z="-1.5529142706" />
+						<point X="-4.2426406871" Z="-4.2426406871" />
+						<point X="-1.5529142706" Z="-5.7955549577" />
+						<point X="1.5529142706" Z="-5.7955549577" />
+						<point X="4.2426406871" Z="-4.2426406871"/>
+						<point X="5.7955549577" Z="-1.5529142706" />
+					</translate>
+					<scale X="0.2" Y="0.2" Z="0.2" />            
+		
+				<models>               
+					<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\2k_haumea_fictional.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1"/>
+        			</models>
+        		</group>
+
+        		<group>
+        			<rotate angle="15" axisX="0" axisY="0" axisZ="1" />
+					<translate time="30" >
+						<point X="9.6592582629" Z="2.588190451" />
+						<point X="7.0710678119" Z="7.0710678119" />
+						<point X="2.588190451" Z="9.6592582629" />
+						<point X="-2.588190451" Z="9.6592582629" />
+						<point X="-7.0710678119" Z="7.0710678119" />
+						<point X="-9.6592582629" Z="2.588190451" />
+						<point X="-9.6592582629" Z="-2.588190451" />
+						<point X="-7.0710678119" Z="-7.0710678119" />
+						<point X="-2.588190451" Z="-9.6592582629" />
+						<point X="2.588190451" Z="-9.6592582629" />
+						<point X="7.0710678119" Z="-7.0710678119" />
+						<point X="9.6592582629" Z="-2.588190451" />
+					</translate>
+					<scale X="0.1" Y="0.1" Z="0.1" />            
+		
+				<models>               
+					<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\2k_ceres_fictional.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1"/>
+        			</models>
+        		</group>
+
+        		<group>
+        			<rotate angle="20" axisX="0" axisY="0" axisZ="1" />
+        			<translate X="14" Y="0" Z="0" />
+				<scale X="0.15" Y="0.15" Z="0.15" />            
+	
+				<models>               
+					<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\2k_eris_fictional.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1"/>
+        			</models>
+        		</group>
+
+        		<group>
+        			<rotate angle="12" axisX="0" axisY="0" axisZ="1" />
+        			<translate X="20" Y="0" Z="0" />
+				<scale X="0.08" Y="0.08" Z="0.08" />            
+		
+				<models>               
+					<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\2k_ceres_fictional.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1"/>
+        			</models>
+        		</group>
+    		</group>
+    		
+		<!--Neptuno-->
+   		<group>
+			<translate time="301125">
+				<point X="193.18516526" Z="51.763809021" />
+				<point X="141.42135624" Z="141.42135624" />
+				<point X="51.763809021" Z="193.18516526" />
+				<point X="-51.763809021" Z="193.18516526" />
+				<point X="-141.42135624" Z="141.42135624" />
+				<point X="-193.18516526" Z="51.763809021" />
+				<point X="-193.18516526" Z="-51.763809021" />
+				<point X="-141.42135624" Z="-141.42135624" />
+				<point X="-51.763809021" Z="-193.18516526" />
+				<point X="51.763809021" Z="-193.18516526" />
+				<point X="141.42135624" Z="-141.42135624" />
+				<point X="193.18516526" Z="-51.763809021" />
+			</translate>
+			<rotate time="3.3" axisX="0" axisY="1" axisZ="0"/>
+			<scale X="0.53" Y="0.53" Z="0.53" />
+
+			<models>
+        			<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\neptunemap.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1" code="14" nome="Neptuno"/>
+        		</models>
+			<!--Luas Neptuno-->
+        		<group>
+        			<rotate angle="18" axisX="0" axisY="0" axisZ="1" />
+					<translate time="30">
+						<point X="5.7955549577" Z="1.5529142706" />
+						<point X="4.2426406871" Z="4.2426406871" />
+						<point X="1.5529142706" Z="5.7955549577" />
+						<point X="-1.5529142706" Z="5.7955549577"/>
+						<point X="-4.2426406871" Z="4.2426406871" />
+						<point X="-5.7955549577" Z="1.5529142706" />
+						<point X="-5.7955549577" Z="-1.5529142706" />
+						<point X="-4.2426406871" Z="-4.2426406871" />
+						<point X="-1.5529142706" Z="-5.7955549577" />
+						<point X="1.5529142706" Z="-5.7955549577" />
+						<point X="4.2426406871" Z="-4.2426406871"/>
+						<point X="5.7955549577" Z="-1.5529142706" />
+					</translate>
+					<scale X="0.17" Y="0.17" Z="0.17" />            
+		
+				<models>               
+					<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\2k_eris_fictional.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1"/>
+        			</models>
+        		</group>
+
+        		<group>
+        			<rotate angle="4" axisX="0" axisY="0" axisZ="1" />
+					<translate time="30" >
+						<point X="9.6592582629" Z="2.588190451" />
+						<point X="7.0710678119" Z="7.0710678119" />
+						<point X="2.588190451" Z="9.6592582629" />
+						<point X="-2.588190451" Z="9.6592582629" />
+						<point X="-7.0710678119" Z="7.0710678119" />
+						<point X="-9.6592582629" Z="2.588190451" />
+						<point X="-9.6592582629" Z="-2.588190451" />
+						<point X="-7.0710678119" Z="-7.0710678119" />
+						<point X="-2.588190451" Z="-9.6592582629" />
+						<point X="2.588190451" Z="-9.6592582629" />
+						<point X="7.0710678119" Z="-7.0710678119" />
+						<point X="9.6592582629" Z="-2.588190451" />
+					</translate>
+					<scale X="0.2" Y="0.2" Z="0.2" />            
+		
+				<models>               
+					<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\2k_eris_fictional.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1"/>
+        			</models>
+        		</group>
+
+        		<group>
+        			<rotate angle="25" axisX="0" axisY="0" axisZ="1" />
+        			<translate X="13" Y="0" Z="0" />
+				<scale X="0.1" Y="0.1" Z="0.1" />            
+		
+				<models>               
+					<model file="Modelos\Modelos_3D\esfera.3d" texture="Modelos\Modelos_3D\2k_eris_fictional.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1"/>
+        			</models>
+        		</group>
+   		</group>
+	</group>
+</scene>

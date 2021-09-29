@@ -1,0 +1,294 @@
+void box(float x, float z, float y, float partition, char* file) {
+
+	ofstream write(file);
+
+	float number_vertices = 6 * (6 * partition * partition);
+
+	write << number_vertices << endl;
+
+	float movimentoX = x / partition;
+	float movimentoY = y / partition;
+	float movimentoZ = z / partition;
+
+	//para calcular texturas
+	float textHorizontal = (float)1 / (float)4;
+	float textVertical = (float)1 / (float)3;
+
+	//face frente(vértice(3 valores) | normal(3 valores) | textura(2 valores) --> 8 pontos por vértice)
+	float myZ = z / 2;
+
+	for (int i = 0; i < partition; i++) {
+
+		float myY = -y / 2 + (movimentoY * i);
+
+		for (int j = 0; j < partition; j++) {
+
+			float myX = -x / 2 + (movimentoX * j);
+
+			float p1_x = myX;
+			float p1_y = myY;
+
+			float p2_x = myX + movimentoX;
+			float p2_y = myY;
+
+			float p3_x = myX;
+			float p3_y = myY + movimentoY;
+
+			float p4_x = myX + movimentoX;
+			float p4_y = myY + movimentoY;
+
+			//coordenadas de textura
+			float textura_p1_x = textHorizontal + ((j * 1.0f) / (partition*4));
+			float textura_p1_y = textVertical + ((i * 1.0f) / (partition*3));
+
+			float textura_p2_x = textHorizontal + ((j + 1.0f) / (partition*4));
+			float textura_p2_y = textVertical + ((i * 1.0f) / (partition*3));
+
+			float textura_p3_x = textHorizontal + ((j * 1.0f) / (partition*4));
+			float textura_p3_y = textVertical + ((i + 1.0f) / (partition*3));
+
+			float textura_p4_x = textHorizontal + ((j + 1.0f) / (partition*4));
+			float textura_p4_y = textVertical + ((i + 1.0f) / (partition*3));
+
+			write << p1_x << " " << p1_y << " " << myZ << " " << 0 << " " << 0 << " " << -1 << " " << textura_p1_x << " " << textura_p1_y << endl;
+			write << p3_x << " " << p3_y << " " << myZ << " " << 0 << " " << 0 << " " << -1 << " " << textura_p3_x << " " << textura_p3_y << endl;
+			write << p2_x << " " << p2_y << " " << myZ << " " << 0 << " " << 0 << " " << -1 << " " << textura_p2_x << " " << textura_p2_y << endl;
+
+			write << p2_x << " " << p2_y << " " << myZ << " " << 0 << " " << 0 << " " << -1 << " " << textura_p2_x << " " << textura_p2_y << endl;
+			write << p3_x << " " << p3_y << " " << myZ << " " << 0 << " " << 0 << " " << -1 << " " << textura_p3_x << " " << textura_p3_y << endl;
+			write << p4_x << " " << p4_y << " " << myZ << " " << 0 << " " << 0 << " " << -1 << " " << textura_p4_x << " " << textura_p4_y << endl;
+		}
+	}
+
+	//face tras(vértice(3 valores) | normal(3 valores) | textura(2 valores) --> 8 pontos por vértice)
+	myZ = -z / 2;
+
+	for (int i = 0; i < partition; i++) {
+
+		float myY = -y / 2 + (movimentoY * i);
+
+		for (int j = 0; j < partition; j++) {
+
+			float myX = -x / 2 + (movimentoX * j);
+
+			float p1_x = myX;
+			float p1_y = myY;
+
+			float p2_x = myX;
+			float p2_y = myY + movimentoY;
+
+			float p3_x = myX + movimentoX;
+			float p3_y = myY;
+
+			float p4_x = myX + movimentoX;
+			float p4_y = myY + movimentoY;
+
+			//coordenadas de textura
+			float textura_p1_x = (textHorizontal + textHorizontal + textHorizontal + textHorizontal) - ((j * 1.0f) / (partition * 4));
+			float textura_p1_y = textVertical + ((i * 1.0f) / (partition * 3));
+
+			float textura_p2_x = (textHorizontal + textHorizontal + textHorizontal + textHorizontal) - + ((j * 1.0f) / (partition * 4));
+			float textura_p2_y = textVertical + ((i + 1.0f) / (partition * 3));
+
+			float textura_p3_x = (textHorizontal + textHorizontal + textHorizontal + textHorizontal) - ((j + 1.0f) / (partition * 4));
+			float textura_p3_y = textVertical + ((i * 1.0f) / (partition * 3));
+
+			float textura_p4_x = (textHorizontal + textHorizontal + textHorizontal + textHorizontal) - ((j + 1.0f) / (partition * 4));
+			float textura_p4_y = textVertical + ((i + 1.0f) / (partition * 3));
+
+			write << p1_x << " " << p1_y << " " << myZ << " " << 0 << " " << 0 << " " << 1 << " " << textura_p1_x << " " << textura_p1_y << endl;
+			write << p3_x << " " << p3_y << " " << myZ << " " << 0 << " " << 0 << " " << 1 << " " << textura_p3_x << " " << textura_p3_y << endl;
+			write << p2_x << " " << p2_y << " " << myZ << " " << 0 << " " << 0 << " " << 1 << " " << textura_p2_x << " " << textura_p2_y << endl;
+
+			write << p2_x << " " << p2_y << " " << myZ << " " << 0 << " " << 0 << " " << 1 << " " << textura_p2_x << " " << textura_p2_y << endl;
+			write << p3_x << " " << p3_y << " " << myZ << " " << 0 << " " << 0 << " " << 1 << " " << textura_p3_x << " " << textura_p3_y << endl;
+			write << p4_x << " " << p4_y << " " << myZ << " " << 0 << " " << 0 << " " << 1 << " " << textura_p4_x << " " << textura_p4_y << endl;
+		}
+	}
+
+	//face direita(vértice(3 valores) | normal(3 valores) | textura(2 valores) --> 8 pontos por vértice)
+	float myX = x / 2;
+
+	for (int i = 0; i < partition; i++) {
+
+		float myY = -y / 2 + (movimentoY * i);
+
+		for (int j = 0; j < partition; j++) {
+
+			float myZ = -z / 2 + (movimentoZ * j);
+
+			float p1_y = myY;
+			float p1_z = myZ;
+
+			float p2_y = myY + movimentoY;
+			float p2_z = myZ + movimentoZ;
+
+			float p3_y = myY;
+			float p3_z = myZ + movimentoZ;
+
+			float p4_y = myY + movimentoY;
+			float p4_z = myZ;
+
+			//coordenadas de textura
+			float textura_p1_x = (textHorizontal + textHorizontal + textHorizontal) - ((j * 1.0f) / (partition * 4));
+			float textura_p1_y = textVertical + ((i * 1.0f) / (partition * 3));
+
+			float textura_p2_x = (textHorizontal + textHorizontal + textHorizontal) - ((j + 1.0f) / (partition * 4));
+			float textura_p2_y = textVertical + ((i + 1.0f) / (partition * 3));
+
+			float textura_p3_x = (textHorizontal + textHorizontal + textHorizontal) - ((j + 1.0f) / (partition * 4));
+			float textura_p3_y = textVertical + ((i * 1.0f) / (partition * 3));
+
+			float textura_p4_x = (textHorizontal + textHorizontal + textHorizontal) - ((j * 1.0f) / (partition * 4));
+			float textura_p4_y = textVertical + ((i + 1.0f) / (partition * 3));
+
+			write << myX << " " << p1_y << " " << p1_z << " " << -1 << " " << 0 << " " << 0 << " " << textura_p1_x << " " << textura_p1_y << endl;
+			write << myX << " " << p3_y << " " << p3_z << " " << -1 << " " << 0 << " " << 0 << " " << textura_p3_x << " " << textura_p3_y << endl;
+			write << myX << " " << p2_y << " " << p2_z << " " << -1 << " " << 0 << " " << 0 << " " << textura_p2_x << " " << textura_p2_y << endl;
+
+			write << myX << " " << p1_y << " " << p1_z << " " << -1 << " " << 0 << " " << 0 << " " << textura_p1_x << " " << textura_p1_y << endl;
+			write << myX << " " << p2_y << " " << p2_z << " " << -1 << " " << 0 << " " << 0 << " " << textura_p2_x << " " << textura_p2_y << endl;
+			write << myX << " " << p4_y << " " << p4_z << " " << -1 << " " << 0 << " " << 0 << " " << textura_p4_x << " " << textura_p4_y << endl;
+		}
+	}
+
+	//face esquerda(vértice(3 valores) | normal(3 valores) | textura(2 valores) --> 8 pontos por vértice)
+	myX = -x / 2;
+
+	for (int i = 0; i < partition; i++) {
+
+		float myY = -y / 2 + (movimentoY * i);
+
+		for (int j = 0; j < partition; j++) {
+
+			float myZ = -z / 2 + (movimentoZ * j);
+
+			float p1_y = myY;
+			float p1_z = myZ;
+
+			float p2_y = myY;
+			float p2_z = myZ + movimentoZ;
+
+			float p3_y = myY + movimentoY;
+			float p3_z = myZ + movimentoZ;
+
+			float p4_y = myY + movimentoY;
+			float p4_z = myZ;
+
+			//coordenadas de textura
+			float textura_p1_x = ((j * 1.0f) / (partition*4));
+			float textura_p1_y = textVertical + ((i * 1.0f) / (partition*3));
+
+			float textura_p2_x = ((j + 1.0f) / (partition*4));
+			float textura_p2_y = textVertical + ((i * 1.0f) / (partition*3));
+
+			float textura_p3_x = ((j + 1.0f) / (partition*4));
+			float textura_p3_y = textVertical + ((i + 1.0f) / (partition*3));
+
+			float textura_p4_x = ((j * 1.0f) / (partition*4));
+			float textura_p4_y = textVertical + ((i + 1.0f) / (partition*3));
+
+			write << myX << " " << p1_y << " " << p1_z << " " << 1 << " " << 0 << " " << 0 << " " << textura_p1_x << " " << textura_p1_y << endl;
+			write << myX << " " << p3_y << " " << p3_z << " " << 1 << " " << 0 << " " << 0 << " " << textura_p3_x << " " << textura_p3_y << endl;
+			write << myX << " " << p2_y << " " << p2_z << " " << 1 << " " << 0 << " " << 0 << " " << textura_p2_x << " " << textura_p2_y << endl;
+
+			write << myX << " " << p1_y << " " << p1_z << " " << 1 << " " << 0 << " " << 0 << " " << textura_p1_x << " " << textura_p1_y << endl;
+			write << myX << " " << p4_y << " " << p4_z << " " << 1 << " " << 0 << " " << 0 << " " << textura_p4_x << " " << textura_p4_y << endl;
+			write << myX << " " << p3_y << " " << p3_z << " " << 1 << " " << 0 << " " << 0 << " " << textura_p3_x << " " << textura_p3_y << endl;
+		}
+	}
+
+	//face baixo(vértice(3 valores) | normal(3 valores) | textura(2 valores) --> 8 pontos por vértice)
+	float myY = -y / 2;
+
+	for (int i = 0; i < partition; i++) {
+
+		float myZ = -z / 2 + (movimentoZ * i);
+
+		for (int j = 0; j < partition; j++) {
+
+			float myX = -x / 2 + (movimentoX * j);
+
+			float p1_x = myX;
+			float p1_z = myZ;
+
+			float p2_x = myX + movimentoX;
+			float p2_z = myZ + movimentoZ;
+
+			float p3_x = myX;
+			float p3_z = myZ + movimentoZ;
+
+			float p4_x = myX + movimentoX;
+			float p4_z = myZ;
+
+			//coordenadas de textura
+			float textura_p1_x = textHorizontal + ((j * 1.0f) / (partition * 4));
+			float textura_p1_y = ((i * 1.0f) / (partition * 3));
+
+			float textura_p2_x = textHorizontal + ((j + 1.0f) / (partition * 4));
+			float textura_p2_y = ((i + 1.0f) / (partition * 3));
+
+			float textura_p3_x = textHorizontal + ((j * 1.0f) / (partition * 4));
+			float textura_p3_y = ((i + 1.0f) / (partition * 3));
+
+			float textura_p4_x = textHorizontal + ((j + 1.0f) / (partition * 4));
+			float textura_p4_y = ((i * 1.0f) / (partition * 3));
+
+			write << p1_x << " " << myY << " " << p1_z << " " << 0 << " " << 1 << " " << 0 << " " << textura_p1_x << " " << textura_p1_y << endl;
+			write << p3_x << " " << myY << " " << p3_z << " " << 0 << " " << 1 << " " << 0 << " " << textura_p3_x << " " << textura_p3_y << endl;
+			write << p2_x << " " << myY << " " << p2_z << " " << 0 << " " << 1 << " " << 0 << " " << textura_p2_x << " " << textura_p2_y << endl;
+
+			write << p1_x << " " << myY << " " << p1_z << " " << 0 << " " << 1 << " " << 0 << " " << textura_p1_x << " " << textura_p1_y << endl;
+			write << p2_x << " " << myY << " " << p2_z << " " << 0 << " " << 1 << " " << 0 << " " << textura_p2_x << " " << textura_p2_y << endl;
+			write << p4_x << " " << myY << " " << p4_z << " " << 0 << " " << 1 << " " << 0 << " " << textura_p4_x << " " << textura_p4_y << endl;
+		}
+	}
+
+	//face cima(vértice(3 valores) | normal(3 valores) | textura(2 valores) --> 8 pontos por vértice)
+	myY = y / 2;
+
+	for (int i = 0; i < partition; i++) {
+
+		float myZ = -z / 2 + (movimentoZ * i);
+
+		for (int j = 0; j < partition; j++) {
+
+			float myX = -x / 2 + (movimentoX * j);
+
+			float p1_x = myX;
+			float p1_z = myZ;
+
+			float p2_x = myX;
+			float p2_z = myZ + movimentoZ;
+
+			float p3_x = myX + movimentoX;
+			float p3_z = myZ + movimentoZ;
+
+			float p4_x = myX + movimentoX;
+			float p4_z = myZ;
+
+			//coordenadas de textura
+			float textura_p1_x = textHorizontal + ((j * 1.0f) / (partition * 4));
+			float textura_p1_y = (textVertical + textVertical + textVertical) - ((i * 1.0f) / (partition * 3));
+
+			float textura_p2_x = textHorizontal + ((j * 1.0f) / (partition * 4));
+			float textura_p2_y = (textVertical + textVertical + textVertical) - ((i + 1.0f) / (partition * 3));
+
+			float textura_p3_x = textHorizontal + ((j + 1.0f) / (partition * 4));
+			float textura_p3_y = (textVertical + textVertical + textVertical) - ((i + 1.0f) / (partition * 3));
+
+			float textura_p4_x = textHorizontal + ((j + 1.0f) / (partition * 4));
+			float textura_p4_y = (textVertical + textVertical + textVertical) - ((i * 1.0f) / (partition * 3));
+
+			write << p1_x << " " << myY << " " << p1_z << " " << 0 << " " << -1 << " " << 0 << " " << textura_p1_x << " " << textura_p1_y << endl;
+			write << p3_x << " " << myY << " " << p3_z << " " << 0 << " " << -1 << " " << 0 << " " << textura_p3_x << " " << textura_p3_y << endl;
+			write << p2_x << " " << myY << " " << p2_z << " " << 0 << " " << -1 << " " << 0 << " " << textura_p2_x << " " << textura_p2_y << endl;
+
+			write << p1_x << " " << myY << " " << p1_z << " " << 0 << " " << -1 << " " << 0 << " " << textura_p1_x << " " << textura_p1_y << endl;
+			write << p4_x << " " << myY << " " << p4_z << " " << 0 << " " << -1 << " " << 0 << " " << textura_p4_x << " " << textura_p4_y << endl;
+			write << p3_x << " " << myY << " " << p3_z << " " << 0 << " " << -1 << " " << 0 << " " << textura_p3_x << " " << textura_p3_y << endl;
+		}
+	}
+
+	write.close();
+}

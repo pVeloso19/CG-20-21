@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<scene>
+	<lights>
+		<light type="SPOT" angle="180" />
+	</lights>
+
+	<group>
+    		<models>
+        		<model file="Modelos\Modelos_3D\teapot.3d" texture="Modelos\Modelos_3D\plutomap1k.jpg" ambR="0.7" ambG="0.7" ambB="0.7" diffR="1" diffG="1" diffB="1"/>
+        	</models>
+    	</group>
+</scene>
