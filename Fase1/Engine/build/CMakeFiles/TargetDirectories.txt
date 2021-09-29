@@ -1,0 +1,3 @@
+C:/Fase1/Engine/build/CMakeFiles/engine.dir
+C:/Fase1/Engine/build/CMakeFiles/ALL_BUILD.dir
+C:/Fase1/Engine/build/CMakeFiles/ZERO_CHECK.dir

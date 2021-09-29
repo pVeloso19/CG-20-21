@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<scene>
+	<group>
+		<models>
+        		<model file="Modelos\Modelos_3D\esfera_2_40_40.3d" />
+        	</models>
+			
+		<!--Luas Neptuno-->
+        	<group>
+        		<rotate angle="18" axisX="0" axisY="0" axisZ="1" />
+        		<translate X="6" Y="0" Z="0" />
+			<scale X="0.17" Y="0.17" Z="0.17" />            
+		
+			<models>               
+				<model file="Modelos\Modelos_3D\esfera_2_40_40.3d" />
+        		</models>
+        	</group>
+
+        	<group>
+        		<rotate angle="4" axisX="0" axisY="0" axisZ="1" />
+        		<translate X="10" Y="0" Z="0" />
+			<scale X="0.2" Y="0.2" Z="0.2" />            
+		
+			<models>               
+				<model file="Modelos\Modelos_3D\esfera_2_40_40.3d" />
+        		</models>
+        	</group>
+
+        	<group>
+        		<rotate angle="25" axisX="0" axisY="0" axisZ="1" />
+        		<translate X="13" Y="0" Z="0" />
+			<scale X="0.1" Y="0.1" Z="0.1" />            
+		
+			<models>               
+				<model file="Modelos\Modelos_3D\esfera_2_40_40.3d" />
+        		</models>
+        	</group>
+   	</group>
+</scene>
+

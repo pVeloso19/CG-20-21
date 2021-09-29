@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<scene>
+	<group>
+    		<models>
+        		<model file="Modelos\Modelos_3D\esfera_2_40_40.3d" />
+    		</models>
+		
+		<!--Luas de Júpiter-->
+        	<group>
+                	<rotate angle="6.68" axisX="0" axisY="0" axisZ="1" />
+        		<translate X="9" Y="0" Z="0" />
+			<scale X="0.04" Y="0.04" Z="0.04" />           
+        	
+			<models>
+                		<model file="Modelos\Modelos_3D\esfera_2_40_40.3d" />
+        		</models>
+        	</group>
+                    
+       		<group>
+        		<rotate angle="7" axisX="0" axisY="0" axisZ="1" />
+        		<translate X="5" Y="0" Z="0" />
+			<scale X="0.03" Y="0.03" Z="0.03" /> 
+          
+       			<models>
+                		<model file="Modelos\Modelos_3D\esfera_2_40_40.3d" />
+        		</models>
+        	</group>
+                   
+        	<group>
+        		<rotate angle="35" axisX="0" axisY="0" axisZ="1" />
+        		<translate X="7" Y="0" Z="0" />
+			<scale X="0.06" Y="0.06" Z="0.06" /> 
+          
+        		<models>
+                		<model file="Modelos\Modelos_3D\esfera_2_40_40.3d" />
+        		</models>
+        	</group>
+                 
+        	<group>
+        		<rotate angle="30" axisX="0" axisY="0" axisZ="1" />
+        		<translate X="9" Y="0" Z="0" />
+			<scale X="0.04" Y="0.04" Z="0.04" />
+           
+			<models>
+                		<model file="Modelos\Modelos_3D\esfera_2_40_40.3d" />
+        		</models>
+        	</group>
+    	</group>
+</scene>
+
