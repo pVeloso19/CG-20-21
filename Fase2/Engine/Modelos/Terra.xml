@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<scene>
+	<group>
+    		<models>
+        		<model file="Modelos\Modelos_3D\esfera_2_40_40.3d" />
+        	</models>
+
+			<!--Lua-->
+        	<group>
+        		<rotate angle="6.68" axisX="0" axisY="0" axisZ="1" />
+        		<translate X="10" Y="0" Z="0" />
+			<scale X="0.37" Y="0.37" Z="0.37" />            
+		
+			<models>               
+				<model file="Modelos\Modelos_3D\esfera_2_40_40.3d" />
+        		</models>
+        	</group>
+    	</group>
+</scene>
+

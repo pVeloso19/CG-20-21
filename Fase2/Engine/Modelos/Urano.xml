@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<scene>
+	<group>
+    		<models>
+        		<model file="Modelos\Modelos_3D\esfera_2_40_40.3d" />
+        	</models>
+				
+		<!--Luas Urano-->
+        	<group>
+        		<rotate angle="8" axisX="0" axisY="0" axisZ="1" />
+        		<translate X="6" Y="0" Z="0" />
+			<scale X="0.2" Y="0.2" Z="0.2" />            
+		
+			<models>               
+				<model file="Modelos\Modelos_3D\esfera_2_40_40.3d" />
+        		</models>
+        	</group>
+
+        	<group>
+        		<rotate angle="15" axisX="0" axisY="0" axisZ="1" />
+        		<translate X="10" Y="0" Z="0" />
+			<scale X="0.1" Y="0.1" Z="0.1" />            
+		
+			<models>               
+				<model file="Modelos\Modelos_3D\esfera_2_40_40.3d" />
+        		</models>
+        	</group>
+
+        	<group>
+        		<rotate angle="20" axisX="0" axisY="0" axisZ="1" />
+        		<translate X="14" Y="0" Z="0" />
+			<scale X="0.15" Y="0.15" Z="0.15" />            
+		
+			<models>               
+				<model file="Modelos\Modelos_3D\esfera_2_40_40.3d" />
+        		</models>
+        	</group>
+
+        	<group>
+        		<rotate angle="12" axisX="0" axisY="0" axisZ="1" />
+        		<translate X="20" Y="0" Z="0" />
+			<scale X="0.08" Y="0.08" Z="0.08" />            
+		
+			<models>               
+				<model file="Modelos\Modelos_3D\esfera_2_40_40.3d" />
+        		</models>
+        	</group>
+    	</group>
+</scene>
+
